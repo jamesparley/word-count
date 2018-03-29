@@ -22,8 +22,5 @@ def count(request):
     sortedwords = sorted(worddictionary.items(), key=operator.itemgetter(1), reverse=True)
     return render(request, 'count.html', {'fulltext':fulltext, 'count':len(wordlist), 'sortedwords':sortedwords})
 
-def homex(request):
-    return render(request, 'home.html', {'hithere':'This is me'})
-
 def eggs(request):
     return HttpResponse('Eggs are good!')
